@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:pizza_app/constants.dart';
+import 'package:pizza_app_admin/constants.dart';
 
 abstract class Styles {
   static const textStyle16 = TextStyle(

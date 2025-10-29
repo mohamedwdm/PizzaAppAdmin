@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:pizza_app/core/utils/styles.dart';
+import 'package:pizza_app_admin/core/utils/styles.dart';
 
 class CustomButtonForSocialMediaConnection extends StatelessWidget {
   const CustomButtonForSocialMediaConnection({

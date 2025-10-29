@@ -21,13 +21,25 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        return android;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for linux - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for linux - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for linux - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
-        return windows;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for linux - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -41,48 +53,14 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAThzMr6A-Z-Q3-jJj6LaWEwGYj7v0EzMQ',
+    apiKey: "AIzaSyAThzMr6A-Z-Q3-jJj6LaWEwGYj7v0EzMQ",
     appId: '1:882626851590:web:7300539af44d7f93a5e487',
     messagingSenderId: '882626851590',
     projectId: 'pizza-app-7cb77',
     authDomain: 'pizza-app-7cb77.firebaseapp.com',
     storageBucket: 'pizza-app-7cb77.firebasestorage.app',
-    measurementId: 'G-QCYCJLXLSJ',
+    measurementId: "G-5N1QK9LT1Z"
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAKvaPUG7vvVVynTTBiw-jMzPxaD7CwuGo',
-    appId: '1:882626851590:android:5451f6fd1d03939ba5e487',
-    messagingSenderId: '882626851590',
-    projectId: 'pizza-app-7cb77',
-    storageBucket: 'pizza-app-7cb77.firebasestorage.app',
-  );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCA0r1X7ItF-sxtSXsiFkmBFjj5iqXIjv8',
-    appId: '1:882626851590:ios:05fbb193fbe7dfaba5e487',
-    messagingSenderId: '882626851590',
-    projectId: 'pizza-app-7cb77',
-    storageBucket: 'pizza-app-7cb77.firebasestorage.app',
-    iosBundleId: 'com.example.pizzaApp',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCA0r1X7ItF-sxtSXsiFkmBFjj5iqXIjv8',
-    appId: '1:882626851590:ios:05fbb193fbe7dfaba5e487',
-    messagingSenderId: '882626851590',
-    projectId: 'pizza-app-7cb77',
-    storageBucket: 'pizza-app-7cb77.firebasestorage.app',
-    iosBundleId: 'com.example.pizzaApp',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyAThzMr6A-Z-Q3-jJj6LaWEwGYj7v0EzMQ',
-    appId: '1:882626851590:web:28c9aca3fd6eb1fba5e487',
-    messagingSenderId: '882626851590',
-    projectId: 'pizza-app-7cb77',
-    authDomain: 'pizza-app-7cb77.firebaseapp.com',
-    storageBucket: 'pizza-app-7cb77.firebasestorage.app',
-    measurementId: 'G-69MGNSMESX',
-  );
 }
