@@ -4,8 +4,9 @@ import 'package:pizza_app_admin/core/utils/styles.dart';
 import 'package:pizza_app_admin/core/widgets/custom_button.dart';
 import 'package:pizza_app_admin/core/widgets/show_snackbar.dart';
 import 'package:pizza_app_admin/features/auth/presentation/manager/auth_cubit/auth_cubit.dart';
-import 'package:pizza_app_admin/features/auth/presentation/views/register_view.dart';
+// import 'package:pizza_app_admin/features/auth/presentation/views/register_view.dart';
 import 'package:pizza_app_admin/features/auth/presentation/views/widgets/custom_text_field.dart';
+import 'package:pizza_app_admin/features/home/presentation/view/home_view.dart';
 
 
 class LoginForm extends StatefulWidget {
@@ -81,8 +82,8 @@ class _LoginFormState extends State<LoginForm> {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        //return const HomeView();
-                        return const RegisterView();
+                        return const HomeView();
+                        // return const RegisterView();
                       },
                     ),
                   );
