@@ -78,15 +78,15 @@ class _LoginFormState extends State<LoginForm> {
             child: BlocConsumer<AuthCubit, AuthState>(
               listener: (context, state) {
                 if (state is LoginSuccess) {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return const HomeView();
-                        // return const RegisterView();
-                      },
-                    ),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) {
+                  //       return const HomeView();
+                  //       // return const RegisterView();
+                  //     },
+                  //   ),
+                  // );
                  // formkey1.currentState!.reset();
                   _emailController.clear();
                   _passwordController.clear();

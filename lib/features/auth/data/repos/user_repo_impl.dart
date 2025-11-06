@@ -12,7 +12,17 @@ import 'package:pizza_app_admin/features/auth/data/repos/user_repo.dart';
 class UserRepoImpl implements UserRepo {
   @override
   Future<void> logOut() async {
-    await FirebaseAuth.instance.signOut();
+    
+  final user = FirebaseAuth.instance.currentUser;
+
+  if (user != null) {
+    log("👋 Logging out user: ${user.email}");
+  } else {
+    log("⚠️ No user currently signed in.");
+  }
+
+  await FirebaseAuth.instance.signOut();
+  log("✅ User logged out successfully");
   }
 
   @override

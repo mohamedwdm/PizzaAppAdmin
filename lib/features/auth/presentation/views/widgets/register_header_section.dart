@@ -17,6 +17,7 @@ class RegisterHeaderSection extends StatelessWidget {
                 text: "Enter your Name, Email and Password for sign up.",
                 style: Styles.textStyle16,
               ),
+              
               TextSpan(
                 text: " Already have account?",
                 style: Styles.textStyle16.copyWith(

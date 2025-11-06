@@ -5,6 +5,7 @@ import 'package:pizza_app_admin/constants.dart';
 import 'package:pizza_app_admin/features/auth/data/repos/user_repo_impl.dart';
 import 'package:pizza_app_admin/features/auth/presentation/manager/auth_cubit/auth_cubit.dart';
 import 'package:pizza_app_admin/features/auth/presentation/views/login_view.dart';
+import 'package:pizza_app_admin/features/auth/presentation/views/widgets/auth_gate.dart';
 import 'package:pizza_app_admin/features/home/presentation/view/home_view.dart';
 import 'package:pizza_app_admin/firebase_options.dart';
 import 'package:pizza_app_admin/simple_bloc_observer.dart';
@@ -35,8 +36,8 @@ class PizzaAppAdmin extends StatelessWidget {
             onPrimary: Colors.white,
           ),
         ),
-        // home: const LoginView(),
-         home: const HomeView(),
+         home: const AuthGate()
+        // home: const HomeView(),
       ),
     );
   }
