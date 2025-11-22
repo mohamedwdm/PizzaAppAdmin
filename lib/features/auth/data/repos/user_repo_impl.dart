@@ -31,7 +31,6 @@ class UserRepoImpl implements UserRepo {
     required String password,
   }) async {
     try {
-      // Step 1: Sign in with Firebase Auth
       UserCredential userCredential = await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: email, password: password);
 
@@ -40,7 +39,6 @@ class UserRepoImpl implements UserRepo {
       if (user != null) {
         log("✅ Signed in as: ${user.email}");
 
-        // Step 2: Get user profile from Firestore (optional)
         DocumentSnapshot userDoc =
             await FirebaseFirestore.instance
                 .collection('users')
@@ -79,13 +77,12 @@ class UserRepoImpl implements UserRepo {
     required bool hasActiveCart,
   }) async {
     try {
-      // Step 1: Create account in Firebase Auth
       UserCredential userCredential = await FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: email, password: password);
 
       User? user = userCredential.user;
 
-      // Step 2: Save user profile in Firestore
+     // Save user profile in Firestore
       if (user != null) {
         final userData = {
         'userid': user.uid,

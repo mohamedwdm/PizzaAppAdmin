@@ -5,6 +5,7 @@ import 'package:pizza_app_admin/features/auth/presentation/manager/auth_cubit/au
 import 'package:pizza_app_admin/features/auth/presentation/views/login_view.dart';
 import 'package:pizza_app_admin/features/home/presentation/view/create_pizza.dart';
 import 'package:pizza_app_admin/features/home/presentation/view/home_view.dart';
+import 'dart:html' as html;
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
@@ -56,6 +57,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           InkWell(
             onTap: () {
               BlocProvider.of<AuthCubit>(context).logOut();
+              html.window.location.reload();
               // Navigator.push(
               //   context,
               //   MaterialPageRoute(
